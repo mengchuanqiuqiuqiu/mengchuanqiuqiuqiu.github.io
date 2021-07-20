@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="代码规范,设计," />
 
 
 
@@ -92,12 +92,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="梦川cc">
-<meta property="og:url" content="https://mengchuanqiuqiuqiu.github.io/tags/%E5%9F%BA%E7%A1%80/index.html">
+<meta name="description" content="本篇文章记录《代码整洁之道》 有意义的命名变量名要求是名副其实的，具有意义的并且需要其他使用者可以读出来的名称类名和对象应该是名词或名词短语 函数函数需要需要短小，并且保证一个函数只做一件事，无其他副作用函数名称使用描述性语句，可以让用户清楚的知道这个函数做了什么 函数参数需要尽可能的少 try&#x2F;catch 需要分离出来并且只处理一件事 注释主张以好的代码替代注释，即观看函数名或变量便可知道该函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="代码整洁之道总结">
+<meta property="og:url" content="https://mengchuanqiuqiuqiu.github.io/2021/07/11/code_tandards/code_standards/index.html">
 <meta property="og:site_name" content="梦川cc">
+<meta property="og:description" content="本篇文章记录《代码整洁之道》 有意义的命名变量名要求是名副其实的，具有意义的并且需要其他使用者可以读出来的名称类名和对象应该是名词或名词短语 函数函数需要需要短小，并且保证一个函数只做一件事，无其他副作用函数名称使用描述性语句，可以让用户清楚的知道这个函数做了什么 函数参数需要尽可能的少 try&#x2F;catch 需要分离出来并且只处理一件事 注释主张以好的代码替代注释，即观看函数名或变量便可知道该函数">
 <meta property="og:locale">
+<meta property="article:published_time" content="2021-07-11T01:46:45.931Z">
+<meta property="article:modified_time" content="2021-07-11T04:07:04.059Z">
 <meta property="article:author" content="梦川">
+<meta property="article:tag" content="代码规范">
+<meta property="article:tag" content="设计">
 <meta name="twitter:card" content="summary">
 
 
@@ -127,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://mengchuanqiuqiuqiu.github.io/tags/基础/"/>
+  <link rel="canonical" href="https://mengchuanqiuqiuqiu.github.io/2021/07/11/code_tandards/code_standards/"/>
 
 
 
 
 
-  <title>标签: 基础 | 梦川cc</title>
+  <title>代码整洁之道总结 | 梦川cc</title>
   
 
 
@@ -158,7 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
     <a target="_blank" rel="noopener" href="https://github.com/mengchuanqiuqiuqiu" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,54 +258,188 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>基础<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mengchuanqiuqiuqiu.github.io/2021/07/11/code_tandards/code_standards/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦川cc">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2021/06/27/study/css_study/%E8%83%8C%E6%99%AF%E8%AE%BE%E7%BD%AE/" itemprop="url">
-              
-                <span itemprop="name">CSS基础</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">代码整洁之道总结</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-06-27T13:06:29+08:00"
-              content="2021-06-27" >
-          06-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-11T09:46:45+08:00">
+                2021-07-11
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" itemprop="url" rel="index">
+                    <span itemprop="name">代码规范</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本篇文章记录《代码整洁之道》</p>
+<h3 id="有意义的命名"><a href="#有意义的命名" class="headerlink" title="有意义的命名"></a>有意义的命名</h3><p><strong>变量名</strong>要求是名副其实的，<strong>具有意义</strong>的并且需要其他使用者可以读出来的名称<br><strong>类名和对象</strong>应该是<strong>名词</strong>或<strong>名词短语</strong></p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数需要需要<strong>短小</strong>，并且保证一个函数<strong>只做一件事</strong>，无其他副作用<br>函数名称使用描述性语句，可以让用户清楚的知道这个函数做了什么</p>
+<p>函数<strong>参数</strong>需要尽可能的少</p>
+<p>try/catch 需要分离出来并且只处理一件事</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>主张以好的代码替代注释，即观看函数名或变量便可知道该函数的意图<br>注释是非必要则不加的，以下示例的好的注释</p>
+<p>好的注释：</p>
+<ul>
+<li>法律信息</li>
+<li>提供信息的注释</li>
+<li>对意图的解释</li>
+<li>阐述</li>
+<li>警示</li>
+<li>TODO 注释</li>
+<li>放大某种看起来不合理地方的重要性</li>
+</ul>
+<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p>每个团队都会有一套规定的格式要求，包含水平垂直，缩进等格式。<br>此部分不表。</p>
+<!-- ### 对象与数据结构 -->
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" rel="tag"># 代码规范</a>
+          
+            <a href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag"># 设计</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/06/30/questions/npm_not_permit/" rel="next" title="npm报错 operation not permitted">
+                <i class="fa fa-chevron-left"></i> npm报错 operation not permitted
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -307,6 +447,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -327,8 +471,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/2.jpg"
@@ -409,6 +562,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E5%91%BD%E5%90%8D"><span class="nav-number">1.</span> <span class="nav-text">有意义的命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">格式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -521,10 +690,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
