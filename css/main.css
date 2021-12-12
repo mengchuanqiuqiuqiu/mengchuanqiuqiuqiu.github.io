@@ -1807,7 +1807,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0644c7;
+  background: #7d5570;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2895,5 +2895,8 @@ hr {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 .vcopy.text-right {
+  display: none;
+}
+.vpower {
   display: none;
 }
