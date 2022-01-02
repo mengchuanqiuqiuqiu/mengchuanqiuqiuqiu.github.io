@@ -108,3 +108,5 @@ deploy:
   repo: "https://github.com/mengchuanqiuqiuqiu/mengchuanqiuqiuqiu.github.io"
   branch: master
 
+sitemap:
+  path: sitemap.xml
