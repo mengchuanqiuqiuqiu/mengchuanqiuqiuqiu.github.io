@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端,学习,记录," />
 
 
 
@@ -96,12 +96,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="梦川cc">
-<meta property="og:url" content="https://mengchuanqiuqiuqiu.github.io/categories/React/index.html">
+<meta name="description" content="基本对象threejs 中有三个基本对象，分别是场景(scene)、摄像机(camera)和渲染器(renderer)。其中场景是一个容器，用于保存跟踪所要渲染的物体和使用的光源，如果没有 scene 对象，那么 threejs 将无法渲染任何物体。threejs。THREEJS.SCENE 有时也被称为场景图，可以用来保存所有图形场景的必要信息。它不仅仅是一个对象数组，还包含了场景图树形结构中的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二、构建Three.js应用的基本组件">
+<meta property="og:url" content="https://mengchuanqiuqiuqiu.github.io/2022/05/18/study/ThreeJS/SecondChapter/index.html">
 <meta property="og:site_name" content="梦川cc">
+<meta property="og:description" content="基本对象threejs 中有三个基本对象，分别是场景(scene)、摄像机(camera)和渲染器(renderer)。其中场景是一个容器，用于保存跟踪所要渲染的物体和使用的光源，如果没有 scene 对象，那么 threejs 将无法渲染任何物体。threejs。THREEJS.SCENE 有时也被称为场景图，可以用来保存所有图形场景的必要信息。它不仅仅是一个对象数组，还包含了场景图树形结构中的">
 <meta property="og:locale">
+<meta property="article:published_time" content="2022-05-18T13:46:58.770Z">
+<meta property="article:modified_time" content="2022-06-04T10:18:42.467Z">
 <meta property="article:author" content="梦川">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="记录">
 <meta name="twitter:card" content="summary">
 
 
@@ -131,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://mengchuanqiuqiuqiu.github.io/categories/React/"/>
+  <link rel="canonical" href="https://mengchuanqiuqiuqiu.github.io/2022/05/18/study/ThreeJS/SecondChapter/"/>
 
 
 
 
 
-  <title>分类: React | 梦川cc</title>
+  <title>二、构建Three.js应用的基本组件 | 梦川cc</title>
   
 
 
@@ -162,7 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
     <a target="_blank" rel="noopener" href="https://github.com/mengchuanqiuqiuqiu" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -256,111 +263,194 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>React<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mengchuanqiuqiuqiu.github.io/2022/05/18/study/ThreeJS/SecondChapter/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="梦川cc">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2022/02/20/study/React/diff/" itemprop="url">
-              
-                <span itemprop="name">Diff算法</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">二、构建Three.js应用的基本组件</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2022-02-20T11:14:22+08:00"
-              content="2022-02-20" >
-          02-20
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-05-18T21:46:58+08:00">
+                2022-05-18
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2022-06-04T18:18:42+08:00">
+                2022-06-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ThreeJS%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">ThreeJS学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2022/01/02/study/React/state/" itemprop="url">
-              
-                <span itemprop="name">解密setState机制</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2022-01-02T19:32:51+08:00"
-              content="2022-01-02" >
-          01-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <h3 id="基本对象"><a href="#基本对象" class="headerlink" title="基本对象"></a>基本对象</h3><p>threejs 中有三个基本对象，分别是场景(scene)、摄像机(camera)和渲染器(renderer)。其中场景是一个<strong>容器</strong>，用于保存跟踪所要渲染的物体和使用的光源，如果没有 scene 对象，那么 threejs 将无法渲染任何物体。threejs。<br>THREEJS.SCENE 有时也被称为场景图，可以用来保存所有图形场景的必要信息。它不仅仅是一个对象数组，还包含了场景图树形结构中的<strong>所有节点</strong>。</p>
+<h3 id="Scene-的一些基本方法"><a href="#Scene-的一些基本方法" class="headerlink" title="Scene 的一些基本方法"></a>Scene 的一些基本方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建Scene</span></span><br><span class="line"><span class="keyword">const</span> scene = <span class="keyword">new</span> THREE.Scene();</span><br><span class="line"><span class="comment">// 向场景中添加对象</span></span><br><span class="line">scene.add(<span class="string">&quot;对象&quot;</span>);</span><br><span class="line"><span class="comment">// 移除场景中的对象</span></span><br><span class="line">scene.remove(<span class="string">&quot;对象&quot;</span>);</span><br><span class="line"><span class="comment">// 获取场景中所有的对象列表</span></span><br><span class="line">scene.children;</span><br><span class="line"><span class="comment">// 通过名称获取特定的对象</span></span><br><span class="line">scene.getObjectByName(<span class="string">&quot;name&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 遍历执行每一个子对象</span></span><br><span class="line"><span class="comment">// 将一个方法当参数传给 traverse()，这个方法会在每一个子对象上执行</span></span><br><span class="line">scene.traverse(func);</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2021/12/14/study/React/life_cycle/" itemprop="url">
-              
-                <span itemprop="name">React生命周期详解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-12-14T22:46:07+08:00"
-              content="2021-12-14" >
-          12-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+<h3 id="给场景添加雾化效果"><a href="#给场景添加雾化效果" class="headerlink" title="给场景添加雾化效果"></a>给场景添加雾化效果</h3><p>使用 fog 属性就可以为整个场景添加雾化效果。<br>雾化效果：<strong>场景中的物体离摄像机越远就越模糊</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> scene = <span class="keyword">new</span> THREE.Scene();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 雾化方式一，雾的浓度随距离线性增长</span></span><br><span class="line"><span class="comment">// Fog(color,near,far)</span></span><br><span class="line">scene.fog = <span class="keyword">new</span> THREE.Fog(<span class="number">0xffffff</span>, <span class="number">0.015</span>, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 雾化方式二，雾的浓度随距离指数增长</span></span><br><span class="line"><span class="comment">// FogExp2(color,浓度)</span></span><br><span class="line">scene.fog = <span class="keyword">new</span> THREE.FogExp2(<span class="number">0xffffff</span>, <span class="number">0.01</span>);</span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+          
+            <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+          
+            <a href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag"># 记录</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/05/18/study/ThreeJS/FirstChapter/" rel="next" title="一、ThreeJs学习说明">
+                <i class="fa fa-chevron-left"></i> 一、ThreeJs学习说明
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -368,6 +458,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -388,8 +482,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/2.jpg"
@@ -470,6 +573,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">基本对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scene-%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">Scene 的一些基本方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99%E5%9C%BA%E6%99%AF%E6%B7%BB%E5%8A%A0%E9%9B%BE%E5%8C%96%E6%95%88%E6%9E%9C"><span class="nav-number">3.</span> <span class="nav-text">给场景添加雾化效果</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -611,10 +730,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
