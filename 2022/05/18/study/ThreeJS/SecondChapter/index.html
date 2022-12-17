@@ -96,15 +96,15 @@
 
 
 
-<meta name="description" content="基本对象threejs 中有三个基本对象，分别是场景(scene)、摄像机(camera)和渲染器(renderer)。其中场景是一个容器，用于保存跟踪所要渲染的物体和使用的光源，如果没有 scene 对象，那么 threejs 将无法渲染任何物体。threejs。THREEJS.SCENE 有时也被称为场景图，可以用来保存所有图形场景的必要信息。它不仅仅是一个对象数组，还包含了场景图树形结构中的">
+<meta name="description" content="基本概念基本对象threejs 中有三个基本对象，分别是场景(scene)、摄像机(camera)和渲染器(renderer)。其中场景是一个容器，用于保存跟踪所要渲染的物体和使用的光源，如果没有 scene 对象，那么 threejs 将无法渲染任何物体。threejs。THREEJS.SCENE 有时也被称为场景图，可以用来保存所有图形场景的必要信息。它不仅仅是一个对象数组，还包含了场景图树形">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二、构建Three.js应用的基本组件">
 <meta property="og:url" content="https://mengchuanqiuqiuqiu.github.io/2022/05/18/study/ThreeJS/SecondChapter/index.html">
 <meta property="og:site_name" content="梦川cc">
-<meta property="og:description" content="基本对象threejs 中有三个基本对象，分别是场景(scene)、摄像机(camera)和渲染器(renderer)。其中场景是一个容器，用于保存跟踪所要渲染的物体和使用的光源，如果没有 scene 对象，那么 threejs 将无法渲染任何物体。threejs。THREEJS.SCENE 有时也被称为场景图，可以用来保存所有图形场景的必要信息。它不仅仅是一个对象数组，还包含了场景图树形结构中的">
+<meta property="og:description" content="基本概念基本对象threejs 中有三个基本对象，分别是场景(scene)、摄像机(camera)和渲染器(renderer)。其中场景是一个容器，用于保存跟踪所要渲染的物体和使用的光源，如果没有 scene 对象，那么 threejs 将无法渲染任何物体。threejs。THREEJS.SCENE 有时也被称为场景图，可以用来保存所有图形场景的必要信息。它不仅仅是一个对象数组，还包含了场景图树形">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-18T13:46:58.770Z">
-<meta property="article:modified_time" content="2022-06-04T10:18:42.467Z">
+<meta property="article:modified_time" content="2022-06-11T03:18:48.343Z">
 <meta property="article:author" content="梦川">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="学习">
@@ -322,8 +322,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2022-06-04T18:18:42+08:00">
-                2022-06-04
+              <time title="更新于" itemprop="dateModified" datetime="2022-06-11T11:18:48+08:00">
+                2022-06-11
               </time>
             
           </span>
@@ -383,11 +383,76 @@
       
 
       
-        <h3 id="基本对象"><a href="#基本对象" class="headerlink" title="基本对象"></a>基本对象</h3><p>threejs 中有三个基本对象，分别是场景(scene)、摄像机(camera)和渲染器(renderer)。其中场景是一个<strong>容器</strong>，用于保存跟踪所要渲染的物体和使用的光源，如果没有 scene 对象，那么 threejs 将无法渲染任何物体。threejs。<br>THREEJS.SCENE 有时也被称为场景图，可以用来保存所有图形场景的必要信息。它不仅仅是一个对象数组，还包含了场景图树形结构中的<strong>所有节点</strong>。</p>
+        <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="基本对象"><a href="#基本对象" class="headerlink" title="基本对象"></a>基本对象</h3><p>threejs 中有三个基本对象，分别是场景(scene)、摄像机(camera)和渲染器(renderer)。其中场景是一个<strong>容器</strong>，用于保存跟踪所要渲染的物体和使用的光源，如果没有 scene 对象，那么 threejs 将无法渲染任何物体。threejs。<br>THREEJS.SCENE 有时也被称为场景图，可以用来保存所有图形场景的必要信息。它不仅仅是一个对象数组，还包含了场景图树形结构中的<strong>所有节点</strong>。</p>
 <h3 id="Scene-的一些基本方法"><a href="#Scene-的一些基本方法" class="headerlink" title="Scene 的一些基本方法"></a>Scene 的一些基本方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建Scene</span></span><br><span class="line"><span class="keyword">const</span> scene = <span class="keyword">new</span> THREE.Scene();</span><br><span class="line"><span class="comment">// 向场景中添加对象</span></span><br><span class="line">scene.add(<span class="string">&quot;对象&quot;</span>);</span><br><span class="line"><span class="comment">// 移除场景中的对象</span></span><br><span class="line">scene.remove(<span class="string">&quot;对象&quot;</span>);</span><br><span class="line"><span class="comment">// 获取场景中所有的对象列表</span></span><br><span class="line">scene.children;</span><br><span class="line"><span class="comment">// 通过名称获取特定的对象</span></span><br><span class="line">scene.getObjectByName(<span class="string">&quot;name&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 遍历执行每一个子对象</span></span><br><span class="line"><span class="comment">// 将一个方法当参数传给 traverse()，这个方法会在每一个子对象上执行</span></span><br><span class="line">scene.traverse(func);</span><br></pre></td></tr></table></figure>
 
 <h3 id="给场景添加雾化效果"><a href="#给场景添加雾化效果" class="headerlink" title="给场景添加雾化效果"></a>给场景添加雾化效果</h3><p>使用 fog 属性就可以为整个场景添加雾化效果。<br>雾化效果：<strong>场景中的物体离摄像机越远就越模糊</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> scene = <span class="keyword">new</span> THREE.Scene();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 雾化方式一，雾的浓度随距离线性增长</span></span><br><span class="line"><span class="comment">// Fog(color,near,far)</span></span><br><span class="line">scene.fog = <span class="keyword">new</span> THREE.Fog(<span class="number">0xffffff</span>, <span class="number">0.015</span>, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 雾化方式二，雾的浓度随距离指数增长</span></span><br><span class="line"><span class="comment">// FogExp2(color,浓度)</span></span><br><span class="line">scene.fog = <span class="keyword">new</span> THREE.FogExp2(<span class="number">0xffffff</span>, <span class="number">0.01</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="强制场景中所有物体使用相同材质"><a href="#强制场景中所有物体使用相同材质" class="headerlink" title="强制场景中所有物体使用相同材质"></a>强制场景中所有物体使用相同材质</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> scene = <span class="keyword">new</span> THREE.Scene();</span><br><span class="line">scene.overrideMaterial = <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123; <span class="attr">color</span>: <span class="number">0xfffffff</span> &#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="几何体和网格"><a href="#几何体和网格" class="headerlink" title="几何体和网格"></a>几何体和网格</h2><p>在前面的例子中我们已经使用了几何体和网格。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sphereGeomerty = THREE.SphereGeometry(<span class="number">4</span>, <span class="number">20</span>, <span class="number">20</span>);</span><br><span class="line"><span class="keyword">const</span> sphereMaterial = THREE.MeshBasicMaterial(&#123; <span class="attr">color</span>: <span class="number">0xffffff</span> &#125;);</span><br><span class="line"><span class="keyword">const</span> sphere = <span class="keyword">new</span> THREE.Mesh(sphereGeomerty, sphereMaterial);</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>通过 THREE.SphereGeometry 定义了物体的形状。</li>
+<li>使用 THREE.MeshBasicMeterial 定义了物体的外观和材质。</li>
+<li>将他们合并添加到场景的网格中: THREE.Mesh</li>
+</ol>
+<h3 id="几何体的属性和方法"><a href="#几何体的属性和方法" class="headerlink" title="几何体的属性和方法"></a>几何体的属性和方法</h3><p>和其他大多数三位库一样，在 Three.js 中的几何体基本上都是三维空间的点集和将这些点链接起来的面。<br>当使用 Threejs 库提供的几何体时不需要自己定义几何体的所有顶点和面。<br>我们也可以通过自定义顶点和面来创建几何体,如下图，我们创建一个拥有八个顶点和十二个三角形面的立方体</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vertices = [</span><br><span class="line">  <span class="keyword">new</span> THREE.Vortor3(<span class="number">1</span>, <span class="number">3</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Vortor3(<span class="number">1</span>, <span class="number">3</span>, -<span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Vortor3(<span class="number">1</span>, -<span class="number">1</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Vortor3(<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Vortor3(-<span class="number">1</span>, <span class="number">3</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Vortor3(-<span class="number">1</span>, <span class="number">3</span>, -<span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Vortor3(-<span class="number">1</span>, <span class="number">1</span>, -<span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Vortor3(-<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>),</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> faces = [</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">4</span>, <span class="number">6</span>, <span class="number">5</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">6</span>, <span class="number">7</span>, <span class="number">5</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">4</span>, <span class="number">5</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">5</span>, <span class="number">0</span>, <span class="number">1</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">7</span>, <span class="number">6</span>, <span class="number">2</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">6</span>, <span class="number">3</span>, <span class="number">2</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">5</span>, <span class="number">7</span>, <span class="number">0</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">7</span>, <span class="number">2</span>, <span class="number">0</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>),</span><br><span class="line">  <span class="keyword">new</span> THREE.Face3(<span class="number">3</span>, <span class="number">6</span>, <span class="number">4</span>),</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> geom = <span class="keyword">new</span> THREE.Geometry();</span><br><span class="line">geom.vertices = vertices;</span><br><span class="line">geom.faces = faces;</span><br><span class="line">geom.computeFaceNormals();</span><br></pre></td></tr></table></figure>
+
+<p>上述代码中在 vertices 数组中保存了构成几何体的顶点，在 faces 数组中保存了由这些顶点连接起来创建的三角形面。<br>new THREE.Face3(0,2,1)就是使用 vertices 数组中点 0，2 和 1 创建而成的三角形面。 <strong>创建面的顶点顺序决定了某个面是面向摄像机还是背向摄像机的</strong>。面向摄像机，顶点的顺序是顺时针，否则是逆时针的。</p>
+<h3 id="网格对象的属性和方法"><a href="#网格对象的属性和方法" class="headerlink" title="网格对象的属性和方法"></a>网格对象的属性和方法</h3><p>我们已经知道，创建一个网格对象需要一个几何体以及一个或多个材质。当网格创建好之后，我们可以将他们添加到场景并进行渲染。下面我们来看一下网格对象提供的属性和方法。</p>
+<table>
+<thead>
+<tr>
+<th>方法(属性)</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>position</td>
+<td>该属性决定该对象相对于父对象的位置，通常父对象是 THREE.Scene 对象或者 THREE.Object3D 对象</td>
+</tr>
+<tr>
+<td>rotation</td>
+<td>通过该属性可以设置围绕每个轴的旋转弧度。Three.js 提供了设置相对特定轴的旋转弧度的方法，rotateX(),rotateY()和 rotateZ()</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>该属性可以沿着 x,y 和 z 轴缩放对象</td>
+</tr>
+<tr>
+<td>translateX(amount)</td>
+<td>沿 x 轴将对象平移 amount 距离</td>
+</tr>
+<tr>
+<td>translateY(amount)</td>
+<td>沿 y 轴将对象平移 amount 距离</td>
+</tr>
+<tr>
+<td>translateZ(amount)</td>
+<td>沿 z 轴…，也可以用 translateOnAxis(axis,distance)函数，该函数允许沿指定轴平移网格</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>该属性为 false 时，THREE.Mesh 将不会渲染到网格中</td>
+</tr>
+</tbody></table>
+<h2 id="选择合适的摄像机"><a href="#选择合适的摄像机" class="headerlink" title="选择合适的摄像机"></a>选择合适的摄像机</h2><p>Three.js 库提供了两种不同的摄像机：<strong>正交投影摄像机</strong>和<strong>透视投影摄像机</strong>。<br>对于<strong>正交投影摄像机</strong>，对象相对于摄像机的距离对渲染的结果时没有影响的，通常用于二维游戏中。<br>对于<strong>透视投影摄像机</strong>，对象距离摄像机越远，他们就会被渲染的越小。<br>首先我们来看一下 THREE.PerspectiveCamera,该方法接受的参数如下图所示：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>fov</td>
+<td>fov 表示视场。这是</td>
+</tr>
+</tbody></table>
 
       
     </div>
@@ -405,11 +470,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+            <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
           
-            <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+            <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
           
-            <a href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag"># 记录</a>
+            <a href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag"><i class="fa fa-tag"></i> 记录</a>
           
         </div>
       
@@ -583,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">基本对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scene-%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">Scene 的一些基本方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99%E5%9C%BA%E6%99%AF%E6%B7%BB%E5%8A%A0%E9%9B%BE%E5%8C%96%E6%95%88%E6%9E%9C"><span class="nav-number">3.</span> <span class="nav-text">给场景添加雾化效果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.1.</span> <span class="nav-text">基本对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scene-%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">Scene 的一些基本方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99%E5%9C%BA%E6%99%AF%E6%B7%BB%E5%8A%A0%E9%9B%BE%E5%8C%96%E6%95%88%E6%9E%9C"><span class="nav-number">1.3.</span> <span class="nav-text">给场景添加雾化效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E5%88%B6%E5%9C%BA%E6%99%AF%E4%B8%AD%E6%89%80%E6%9C%89%E7%89%A9%E4%BD%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%90%8C%E6%9D%90%E8%B4%A8"><span class="nav-number">1.4.</span> <span class="nav-text">强制场景中所有物体使用相同材质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E4%BD%93%E5%92%8C%E7%BD%91%E6%A0%BC"><span class="nav-number">2.</span> <span class="nav-text">几何体和网格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E4%BD%93%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">几何体的属性和方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E6%A0%BC%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">网格对象的属性和方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%90%88%E9%80%82%E7%9A%84%E6%91%84%E5%83%8F%E6%9C%BA"><span class="nav-number">3.</span> <span class="nav-text">选择合适的摄像机</span></a></li></ol></div>
             
 
           </div>
@@ -787,10 +852,6 @@
 
   
 
-  
-   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-   <script type="text/javascript" src="/js/src/fireworks.js"></script>
   
 </body>
 </html>
